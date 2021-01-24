@@ -1,0 +1,37 @@
+{
+  "name": "tailwindcss-nodejs-exemple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "browser-sync": "^2.26.14",
+    "cssnano": "^4.1.10",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "tailwind": "npx tailwindcss build index.css -o dist/index.css",
+    "autoprefixer": "postcss dist/index.css -u autoprefixer --no-map -o dist/index.css",
+    "minify": "postcss dist/index.css -u cssnano --no-map -o dist/index.min.css",
+    "build": "npm run tailwind && npm run autoprefixer",
+    "production": "npm run tailwind && npm run autoprefixer && npm run minify",
+    "sync": "browser-sync start --server --files \"**/*\"",
+    "watch:dev": "nodemon -x npm run build",
+    "watch": "run-p watch:dev sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/les-enovateurs/tailwindcss-nodejs-exemple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/les-enovateurs/tailwindcss-nodejs-exemple/issues"
+  },
+  "homepage": "https://github.com/les-enovateurs/tailwindcss-nodejs-exemple#readme"
+}
