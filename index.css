@@ -10,3 +10,12 @@
 .-rotate-35 {
     --tw-rotate: -35deg;
 }
+
+.theme-switch:checked {
+  @apply duration-500;
+  left: 40px;
+}
+
+.theme-switch:checked + .theme-switch-label {
+  @apply bg-blue-300 duration-500;
+}
