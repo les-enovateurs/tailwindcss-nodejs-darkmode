@@ -12,10 +12,9 @@
 }
 
 .theme-switch:checked {
-  @apply transition duration-500;
   left: 40px;
 }
 
 .theme-switch:checked + .theme-switch-label {
-  @apply bg-blue-300 transition duration-500;
+  @apply bg-blue-300;
 }
