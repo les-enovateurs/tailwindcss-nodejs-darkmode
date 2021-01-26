@@ -12,7 +12,7 @@
 }
 
 .theme-switch:checked {
-  left: 40px;
+  @apply transition-transform	transform translate-x-10 duration-500;
 }
 
 .theme-switch:checked + .theme-switch-label {
